@@ -4,8 +4,10 @@ import random
 import time
 
 # ===== CONFIG =====
-TOKEN = "BOT_API_TOKEN"
-ADMIN_ID = "TELEGRAM_USER_ID"  # Apna Telegram ID
+import os
+
+TOKEN = os.environ.get("BOT_API_TOKEN")
+ADMIN_ID = int(os.environ.get("TELEGRAM_USER_ID"))
 
 # ===== HUMAN-LIKE AUTO REPLY =====
 keywords = {
